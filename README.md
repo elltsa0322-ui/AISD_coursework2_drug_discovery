@@ -82,6 +82,8 @@ Dengue and EGFR were selected because they represent **opposite ends of data mat
 
 Together, Dengue → Malaria → EGFR form a **data-maturity gradient**, enabling systematic analysis of how dataset size, quality, and chemical space shape Chemprop performance.
 
+---
+
 
 ## ⚙️ 3. Adaptations for Model Architecture
 
@@ -110,12 +112,6 @@ As a result, each dataset in this project uses a threshold aligned with its **bi
 ---
 
 ## 📈 5. Model Performance & Evaluation
-
-### **5.1 Dengue (NS3 Protease)**
-
-## 📈 5. Model Performance & Evaluation
-
----
 
 ## **5.1 Dengue (NS3 Protease)**
 
