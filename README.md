@@ -14,12 +14,77 @@ The goal is to understand how **biological readiness**, **dataset maturity**, an
 
 ## 🔧 0. Environment Setup
 
-This project uses **Chemprop (D-MPNN)**, RDKit, and standard scientific Python libraries.  
-To ensure reproducibility, the environment can be installed using the provided `environment.yml` file or by manual setup.
+This project uses Chemprop (D-MPNN), RDKit, and standard scientific Python libraries.  
+You can install the environment using the provided environment.yml file or by manual setup.
 
-Verify installation:
+---
 
+### 1. Create Conda Environment (Recommended)
+
+conda env create -f environment.yml  
+conda activate chemprop  
+
+Verify installation:  
 python -c "import chemprop; print('Chemprop OK')"
+
+---
+
+### 2. Manual Installation (Alternative)
+
+If you prefer to install everything step-by-step:
+
+Create base environment:  
+conda create -n chemprop python=3.10 -y  
+conda activate chemprop  
+
+Install RDKit:  
+conda install -c conda-forge rdkit -y  
+
+Install Chemprop (official GitHub method):  
+pip install git+https://github.com/chemprop/chemprop.git  
+
+Install additional libraries:  
+pip install pandas numpy scikit-learn matplotlib seaborn tqdm  
+pip install jupyter notebook ipykernel  
+
+---
+
+### 3. Verify Components
+
+Check RDKit:  
+python -c "from rdkit import Chem; print(Chem.MolFromSmiles('CCO'))"
+
+Check Chemprop CLI:  
+chemprop_train --help  
+
+Add Jupyter kernel:  
+python -m ipykernel install --user --name chemprop --display-name "chemprop"
+
+---
+
+### 4. (Optional) GPU Support
+
+Install CUDA-enabled PyTorch:  
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121  
+
+Check CUDA:  
+python -c "import torch; print(torch.cuda.is_available())"
+
+---
+
+### 5. Repository Structure (for reference)
+
+AISD_coursework2_drug_discovery/  
+│  
+├── data/  
+├── notebooks/  
+├── chemprop_runs/  
+├── generative/  
+├── environment.yml  
+└── README.md  
+
+This environment setup supports baseline reproduction, dengue/EGFR contextualisation, and the generative demo.
+
 
 
 ---
