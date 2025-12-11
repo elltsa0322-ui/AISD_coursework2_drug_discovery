@@ -70,17 +70,6 @@ Potency distributions differ strongly:
     
 Dengue and EGFR were selected because they represent **opposite ends of data maturity**, providing a controlled way to test whether a malaria-trained workflow can generalise across Taiwan-relevant health challenges.
 
-### Dengue — Low-data neglected disease
-- Small, noisy, heterogeneous dataset (353 molecules from multiple serotypes)  
-- Weak activity distribution; early-stage discovery  
-- Ideal for testing **low-data generalisation** and model robustness under neglected-disease constraints
-
-### EGFR — High-maturity oncology dataset
-- Large, diverse dataset (10,466 molecules)  
-- Strong SAR structure, standardised assays  
-- Ideal for evaluating **scalability** to high-quality, high-diversity datasets central to Taiwan’s precision oncology landscape
-
-Together, Dengue → Malaria → EGFR form a **data-maturity gradient**, enabling systematic analysis of how dataset size, quality, and chemical space shape Chemprop performance.
 
 ---
 
