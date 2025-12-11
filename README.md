@@ -11,6 +11,41 @@ This project examines how well a Chemprop-based antimalarial drug discovery mode
 The goal is to understand how **biological readiness**, **dataset maturity**, and **chemical diversity** shape AI model performance, and what this reveals about the equitable use of AI in global health (SDGs).
 
 
+## Repository Structure
+
+This repository is organised into modular sub-folders that mirror the main experimental steps in the project:
+
+```text
+AISD_Coursework_2_Drug_discovery/
+├── README.md
+├── 2_BaselineReproduction_malaria/
+│   ├── 2.1_data/
+│   │   ├── 2.1.1_raw/                -> Original OSM Series 4 data
+│   │   └── 2.1.2_processed/          -> Cleaned / binarised / normalised malaria datasets
+│   ├── 2.2_notebook/                 -> Jupyter notebooks for data curation + Chemprop runs + Graphs
+│   └── 2.3_chemprop_results/         -> Chemprop classification outputs (scores, predictions, logs)
+│
+├── 3_TaiwanContextualisation_dengue_ns3/
+│   ├── 3.1_data/
+│   │   ├── 3.1.1_raw/                -> ChEMBL-derived Dengue NS3 protease bioactivity data
+│   │   └── 3.1.2_processed/          -> Merged, thresholded, and task-specific datasets
+│   ├── 3.2_notebook/                 -> Dengue curation + Chemprop classification notebook + Graphs
+│   └── 3.3_chemprop_results/         -> Dengue Chemprop outputs (CV metrics, test_preds, logs)
+│
+├── 4_TaiwanContextualisation_lung_cancer_EGFR/
+│   ├── 4.1_data/
+│   │   ├── 4.1.1_raw/                -> EGFR kinase inhibitor panel (ChEMBL query)
+│   │   └── 4.1.2_processed/          -> IC50 / pChEMBL curation + ML-ready datasets
+│   ├── 4.2_notebook/                 -> EGFR curation + Chemprop classification notebook + Graphs
+│   └── 4.3_chemprop_results/         -> EGFR Chemprop outputs (fold-wise and aggregate)
+│
+├── 5_Report/                         -> Graph collections
+
+
+```
+
+
+
 ## 🔧 0. Environment Setup
 
 This project uses Chemprop (D-MPNN), RDKit, and standard scientific Python libraries.  
