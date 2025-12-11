@@ -10,7 +10,6 @@ This project examines how well a Chemprop-based antimalarial drug discovery mode
 
 The goal is to understand how **biological readiness**, **dataset maturity**, and **chemical diversity** shape AI model performance, and what this reveals about the equitable use of AI in global health (SDGs).
 
----
 
 ## 🔧 0. Environment Setup
 
@@ -21,11 +20,16 @@ You can install the environment using the provided environment.yml file or by ma
 
 ### 1. Create Conda Environment (Recommended)
 
+```bash
 conda env create -f environment.yml  
-conda activate chemprop  
+conda activate chemprop
+```
 
 Verify installation:  
+
+```
 python -c "import chemprop; print('Chemprop OK')"
+```
 
 ---
 
@@ -34,66 +38,49 @@ python -c "import chemprop; print('Chemprop OK')"
 If you prefer to install everything step-by-step:
 
 Create base environment:  
+```
 conda create -n chemprop python=3.10 -y  
-conda activate chemprop  
+conda activate chemprop
+```
 
-Install RDKit:  
-conda install -c conda-forge rdkit -y  
+Install RDKit:
+```
+conda install -c conda-forge rdkit -y
+```
 
 Install Chemprop (official GitHub method):  
-pip install git+https://github.com/chemprop/chemprop.git  
+```
+pip install git+https://github.com/chemprop/chemprop.git
+```
 
-Install additional libraries:  
+Install additional libraries:
+```
 pip install pandas numpy scikit-learn matplotlib seaborn tqdm  
-pip install jupyter notebook ipykernel  
+pip install jupyter notebook ipykernel
+```
 
 ---
 
 ### 3. Verify Components
 
 Check RDKit:  
+```
 python -c "from rdkit import Chem; print(Chem.MolFromSmiles('CCO'))"
+```
 
 Check Chemprop CLI:  
+```
 chemprop_train --help  
+```
 
 Add Jupyter kernel:  
+```
 python -m ipykernel install --user --name chemprop --display-name "chemprop"
-
----
-
-### 4. (Optional) GPU Support
-
-Install CUDA-enabled PyTorch:  
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121  
-
-Check CUDA:  
-python -c "import torch; print(torch.cuda.is_available())"
-
----
-
-### 5. Repository Structure (for reference)
-
-AISD_coursework2_drug_discovery/  
-│  
-├── data/  
-├── notebooks/  
-├── chemprop_runs/  
-├── generative/  
-├── environment.yml  
-└── README.md  
-
-This environment setup supports baseline reproduction, dengue/EGFR contextualisation, and the generative demo.
-
+```
 
 
 ---
 
-### **1. Create Conda Environment (Recommended)**
-
-```bash
-conda env create -f environment.yml
-conda activate chemprop
 
 ## 🧪 1. Baseline: Antimalarial Drug Discovery (Open Source Malaria Series 4)
 
