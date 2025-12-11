@@ -100,9 +100,9 @@ As a result, each dataset in this project uses a threshold aligned with its **bi
 
 ---
 
-## 📈 5. Model Performance & Evaluation
+## 📈 4. Model Performance & Evaluation
 
-## **5.1 Dengue (NS3 Protease)**
+## **4.1 Dengue (NS3 Protease)**
 
 **Overall ROC-AUC: 0.616  
 PRC-AUC: ~0.21  
@@ -146,7 +146,7 @@ These findings emphasise why global-health modelling requires **robust uncertain
 
 ---
 
-## **5.2 Lung Cancer (EGFR)**
+## **4.2 Lung Cancer (EGFR)**
 
 **ROC-AUC ≈ 0.88 (std ≈ 0.018)  
 PRC-AUC ≈ 0.93  
@@ -191,7 +191,7 @@ models trained on homogeneous datasets tend to stay inside the known chemical sp
 
 ---
 
-## **5.3 Comparative View (Dengue → Malaria → EGFR)**
+## **4.3 Comparative View (Dengue → Malaria → EGFR)**
 
 | Dataset | Size | Potency Strength | SAR Structure | Expected ML Performance |
 |--------|------|------------------|---------------|--------------------------|
@@ -205,7 +205,7 @@ This gradient demonstrates a core conclusion of the project:
 
 ---
 
-## **5.4 What This Means for Taiwan**
+## **4.4 What This Means for Taiwan**
 
 - **Dengue modelling** highlights the difficulty of using AI for neglected diseases with limited data.  
   → Suggests future directions: active learning, transfer learning, and uncertainty quantification.
@@ -217,7 +217,7 @@ Together, these results illustrate how AI tools must be **matched to the data re
 
 ---
 
-## 🌍 6. Discussion and Critical Reflections on SDGs
+## 🌍 5. Discussion and Critical Reflections on SDGs
 
 ### **Dengue – Scientific Readiness and Equity Challenges (SDG 3.b, SDG 17)**
 
